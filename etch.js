@@ -1,8 +1,8 @@
 /* Prompt for grid size */
-let answer = parseInt(window.prompt('Enter grid size up to 500:'));
+let answer = parseInt(window.prompt('Enter grid size up to 100:'));
 
-while (answer > 500) {
-  answer = parseInt(window.prompt('Grid size must be less than or equal to 500:'));
+while (answer > 100) {
+  answer = parseInt(window.prompt('Grid size must be less than or equal to 100:'));
 };
 
 // console.log(answer);
@@ -11,7 +11,7 @@ while (answer > 500) {
 const container = document.querySelector('#gridContainer');
 
 // Variable for equal w/h distribution
-let dimension = parseFloat(Math.sqrt(95 * 95 / answer));
+let dimension = parseFloat(100/answer);
 
 // Function to append no. of squares based on user input
 
@@ -21,7 +21,6 @@ const appendDiv = () => {
   newDiv.style.width = `${dimension}vw`;
   newDiv.style.height = `${dimension}vw`;
   newDiv.style.backgroundColor = 'red';
-  newDiv.style.margin = '0.1vw';
   newDiv.style.border = 'white';
   container.appendChild(newDiv);
 }
@@ -29,7 +28,7 @@ const appendDiv = () => {
 // Will only run if an input given to the prompt
 
 if (answer) {
-  for (let i = 0; i < answer; i++) {
+  for (let i = 0; i < (answer*answer); i++) {
     appendDiv();
   }
 }
