@@ -44,3 +44,12 @@ const glow = (e) => {
 gridDiv.forEach(div => {
   div.addEventListener('mouseover', glow);
 })
+
+/* Button prompt */
+const button = document.querySelector('button');
+
+const reprompt = () => {
+  answer = parseInt(window.prompt('Enter new grid dimension:'));
+}
+
+button.addEventListener('click', reprompt);
