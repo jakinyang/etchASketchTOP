@@ -1,8 +1,8 @@
 /* Prompt for grid size */
-let answer = parseInt(window.prompt('Enter grid size up to 100:'));
+let answer = parseInt(window.prompt('Enter grid size up to 500:'));
 
-while (answer > 100) {
-  answer = parseInt(window.prompt('Grid size must be less than or equal to 100:'));
+while (answer > 500) {
+  answer = parseInt(window.prompt('Grid size must be less than or equal to 500:'));
 };
 
 // console.log(answer);
@@ -48,8 +48,11 @@ gridDiv.forEach(div => {
 /* Button prompt */
 const button = document.querySelector('button');
 
+// Remprompt for new grid size
 const reprompt = () => {
-  answer = parseInt(window.prompt('Enter new grid dimension:'));
+  window.location.reload();
 }
+
+// 
 
 button.addEventListener('click', reprompt);
