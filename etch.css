@@ -5,6 +5,8 @@ html {
 .container {
   display: flex;
   flex-flow: row wrap;
+  justify-content: center;
+  align-items:center;
   width: 99vw;
   height: 99vw;
 }
