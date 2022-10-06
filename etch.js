@@ -12,7 +12,6 @@ const container = document.querySelector('#gridContainer');
 
 // Variable for equal w/h distribution
 let dimension = parseFloat(Math.sqrt(95 * 95 / answer));
-console.log(dimension);
 
 // Function to append no. of squares based on user input
 
@@ -25,7 +24,6 @@ const appendDiv = () => {
   newDiv.style.margin = '0.1vw';
   newDiv.style.border = 'white';
   container.appendChild(newDiv);
-  console.log(newDiv.style.width);
 }
 
 // Will only run if an input given to the prompt
@@ -37,15 +35,12 @@ if (answer) {
 }
 
 /* Hover effect */
-const gridDiv = document.querySelectorAll('gridDiv');
+const gridDiv = document.querySelectorAll('.gridDiv');
 
 const glow = (e) => {
-  console.log(e);
   e.target.style.backgroundColor = 'blue';
 }
 
 gridDiv.forEach(div => {
   div.addEventListener('mouseover', glow);
 })
-
-
